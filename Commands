@@ -1,0 +1,12 @@
+TEXT FILE
+
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get install -y python-pip
+RUN pip install pandas,numpy,scipy
+
+COPY sample.txt .
+
+CMD python py_program.py
+CMD WC -1
